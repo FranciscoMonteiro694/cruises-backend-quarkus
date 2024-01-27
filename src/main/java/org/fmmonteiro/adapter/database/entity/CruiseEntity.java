@@ -1,19 +1,17 @@
-package org.fmmonteiro.model;
+package org.fmmonteiro.adapter.database.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
-
-public class Cruise {
+@Getter
+@Table(name = "cruise")
+public class CruiseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Long companyId;
     private String shipName;
     private Integer crewCapacity;
