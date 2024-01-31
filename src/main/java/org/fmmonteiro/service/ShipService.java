@@ -2,7 +2,7 @@ package org.fmmonteiro.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import lombok.AllArgsConstructor;
-import org.fmmonteiro.adapter.database.repository.CruiseRepository;
+import org.fmmonteiro.adapter.database.CruiseRepository;
 import org.fmmonteiro.model.dtos.response.Cruise;
 
 import java.util.List;

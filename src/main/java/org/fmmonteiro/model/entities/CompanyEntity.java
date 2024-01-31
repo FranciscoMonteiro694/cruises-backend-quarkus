@@ -1,4 +1,4 @@
-package org.fmmonteiro.adapter.database.entity;
+package org.fmmonteiro.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
