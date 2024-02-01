@@ -18,6 +18,7 @@ public class PortService {
         return portRepository.getAllPorts().stream().map(portEntity -> Port.builder()
                 .name(portEntity.getName())
                 .flagUrl(portEntity.getFlagUrl())
+                .imageUrl(portEntity.getImageUrl())
                 .build())
                 .collect(Collectors.toList());
     }

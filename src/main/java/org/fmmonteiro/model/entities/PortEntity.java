@@ -13,4 +13,5 @@ public class PortEntity {
     private Long id;
     private String name;
     private String flagUrl;
+    private String imageUrl;
 }
