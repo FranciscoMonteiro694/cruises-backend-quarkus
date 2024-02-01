@@ -6,6 +6,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import lombok.AllArgsConstructor;
 import org.fmmonteiro.model.dtos.response.Cruise;
+import org.fmmonteiro.model.dtos.response.UpcomingShip;
 import org.fmmonteiro.service.ShipService;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ShipResource {
 
-    ShipService shipService;
+    private final ShipService shipService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -26,7 +27,7 @@ public class ShipResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/upcoming-ships")
-    public void retrieveUpcomingShips() {
-
+    public List<UpcomingShip> retrieveUpcomingShips() {
+        return shipService.getUpcomingShips();
     }
 }
