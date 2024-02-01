@@ -18,7 +18,15 @@ public class ShipResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Cruise> retrieveShips() {
+    @Path("/most-popular")
+    public List<Cruise> retrieveTopShips() {
         return shipService.getAllCruises();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/upcoming-ships")
+    public void retrieveUpcomingShips() {
+
     }
 }
